@@ -1,0 +1,14 @@
+{
+  "name": "Scrim-s0pmh2c1jt",
+  "description": "https://scrimba.com/s0pmh2c1jt/head",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
