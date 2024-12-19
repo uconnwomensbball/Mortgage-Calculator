@@ -1,6 +1,6 @@
 @font-face {
 font-family: "Jakarta";
-src: url('PlusJakartaSans-VariableFont_wght');
+src: url("./Jakarta.ttf");
 }
 
 body {
@@ -8,9 +8,8 @@ body {
     background: hsl(202, 86%, 94%);
     color: white;
     text-align: center;
-    padding: 20px;
     min-width: 320px;
-    max-width: 600px;
+    max-width: 590px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,7 +22,7 @@ body {
     display: grid;
     grid-template: 1fr/1fr 1fr;
     border-radius: 10px;
-    
+
 }
 
 /*CONTAINER-LEFT*/
@@ -32,7 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px 0px 20px 20px;
+    padding: 5px 0px 20px 20px;
 
 }
 
@@ -81,10 +80,12 @@ body {
 
 .mortgage-term-input{
     width: 3.75rem;
+    padding-left: 5px;
 }
 
 .interest-rate-input{
     width: 5rem;
+    padding-left: 5px;
 }
 
 input:focus, button:focus {
@@ -101,11 +102,11 @@ input:focus, button:focus {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    width: 14rem;
+    width: 14.5rem;
     margin-top: 5px;
-    border: 1px solid hsl(202, 55%, 16%); 
     padding: 4px;
-    border-radius: 3px; 
+    border-radius: 3px;
+    border: 1px solid hsl(200, 26%, 54%);
 }
 
 /*CONTAINER-RIGHT*/
@@ -116,10 +117,12 @@ input:focus, button:focus {
     align-items: center;
     background-color: hsl(202, 55%, 16%);
     border-radius: 0px 10px 10px 50px;
-    padding: 25px 15px;
+    padding: 15px 0px;
 }
+
 .container-right>h4{
-    margin: 0px;    
+    margin: 0px; 
+    padding: 0px;   
 }
 
 img{
@@ -127,13 +130,33 @@ img{
     margin-top: 10px;
 }
 
+.your-results-p{
+    margin: 0px 0px;
+    text-align: left; 
+    padding: 0px; 
+}
+
+.your-results-p-text{
+    padding: 0px 10px; 
+}
+.your-monthly-payments-text{
+      margin: 0px; 
+     padding: 0px; 
+}
+
+#monthly-repayment-result-text{
+     margin-top: 10px; 
+     margin-bottom: 5px;
+     padding: 0px; 
+}
 .results-container{
     text-align: left;
     border-top: 3px solid hsl(61, 70%, 52%);
-    background-color: hsl(202, 55%, 16%);
+    background-color: #0e2532;
     border-radius: 5px; 
     padding: 10px 15px;
     color: hsl(203, 41%, 72%);
+    margin-top: 5px; 
 }
 
 /*BUTTONS*/
@@ -173,7 +196,7 @@ button{
     
 }
 
-.icons-term-rate{
+.icon-interest-rate, .icon-mortgage-term{
     background-color: hsl(202, 86%, 94%);
     color: hsl(200, 24%, 40%);
     padding: 5px 7px;

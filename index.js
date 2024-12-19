@@ -11,6 +11,11 @@ const mortgageAmountInput=document.getElementById("mortgage-amount-input")
 const mortgageTermInput=document.getElementById("mortgage-term-input")
 const interestRateInput=document.getElementById("interest-rate-input")
 
+//ICONS
+const iconAmount = document.getElementById("icon-amount")
+const iconMortgageTerm = document.getElementById("icon-mortgage-term")
+const iconInterestRate = document.getElementById("icon-interest-rate")
+
 //WARNINGS
 const mortgageAmountWarning = document.getElementById("mortgage-amount-warning")
 const mortgageTermWarning = document.getElementById("mortgage-term-warning")
@@ -49,31 +54,61 @@ function calculateMortgage(principal, annualInterestRate, years){
         radioBtnRepayment.classList.add("lime-color-background")
         console.log("radiobtn repayment checked!")
         containerRight.innerHTML = `
-        <p class = "white-text">Your results</p>
-        <p class="small-text slate-three-hundred-text">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
+        <p class = "your-results-p white-text"><strong>Your results</strong></p>
+        <p class="your-results-p-text small-text slate-three-hundred-text">Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
         <div class ="results-container">
-            <p class="small-text">Your monthly payments</p>
+            <p class="your-monthly-payments-text small-text">Your monthly payments</p>
             <h1 id = "monthly-repayment-result-text" class = "lime-color-text">$${monthlyPayment.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h1>
             <hr>
             <p class="small-text">Total you'll repay over the ${years}-year term</p>
-            <p class="white-text">$${totalPayment.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+            <p class="white-text"><strong>$${totalPayment.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong></p>
         </div>
         `
     }
     else{
         containerRight.innerHTML = `
-        <h3>Your results</h3>
+        <h3><strong>Your results</strong></h3>
         <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
         <div class ="results-container">
             <p>Your monthly payments in interest only</p>
             <h1 id = "monthly-repayment-result-text" class = "lime-color-text">$${monthlyInterest.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h1>
             <p>Total interest you'll repay over the ${years}-year term</p>
-            <p class = "white-text">$${totalInterest.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+            <p class = "white-text"><strong>$${totalInterest.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong></p>
         </div>
         `
     }
 }
 
+//MORTGAGE AMOUNT FOCUS-BLUR
+mortgageAmountInput.addEventListener('focus', () => {
+        mortgageAmountInput.style.border = "2px solid hsl(61, 70%, 52%)";
+        iconAmount.style.backgroundColor = "hsl(61, 70%, 52%)"})
+        
+mortgageAmountInput.addEventListener('blur', () => {
+    mortgageAmountInput.style.border = "";
+    iconAmount.style.backgroundColor = ""})
+
+//MORTGAGE TERM FOCUS-BLUR
+mortgageTermInput.addEventListener("focus", ()=>{
+    mortgageTermInput.style.border = "2px solid hsl(61, 70%, 52%)"
+    iconMortgageTerm.style.backgroundColor = "hsl(61, 70%, 52%)"
+})
+mortgageTermInput.addEventListener("blur", ()=>{
+    mortgageTermInput.style.border = ""; 
+    iconMortgageTerm.style.backgroundColor = ""
+})
+
+//INTEREST RATE FOCUS-BLUR
+interestRateInput.addEventListener("focus", ()=>{
+    interestRateInput.style.border = "2px solid hsl(61, 70%, 52%)"
+    iconInterestRate.style.backgroundColor = "hsl(61, 70%, 52%)"
+})
+interestRateInput.addEventListener("blur", ()=>{
+    interestRateInput.style.border = ""; 
+    iconInterestRate.style.backgroundColor = ""
+})
+
+//RADIO-BTNS CHANGE
 radioBtnRepayment.addEventListener("change", function () {
     if (radioBtnRepayment.checked) {
         repaymentDiv.classList.add("lime-color-background");
