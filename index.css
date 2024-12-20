@@ -102,7 +102,7 @@ input:focus, button:focus {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    width: 14.5rem;
+    width: 14rem;
     margin-top: 5px;
     padding: 4px;
     border-radius: 3px;
@@ -130,6 +130,10 @@ img{
     margin-top: 10px;
 }
 
+.results-shown-here-text{
+    padding: 0px 15px;
+}
+
 .your-results-p{
     margin: 0px 0px;
     text-align: left; 
@@ -137,7 +141,7 @@ img{
 }
 
 .your-results-p-text{
-    padding: 0px 10px; 
+    padding: 0px 15px; 
 }
 .your-monthly-payments-text{
       margin: 0px; 
@@ -148,6 +152,7 @@ img{
      margin-top: 10px; 
      margin-bottom: 5px;
      padding: 0px; 
+     
 }
 .results-container{
     text-align: left;
@@ -157,6 +162,7 @@ img{
     padding: 10px 15px;
     color: hsl(203, 41%, 72%);
     margin-top: 5px; 
+    max-width: 220px;
 }
 
 /*BUTTONS*/
@@ -290,7 +296,7 @@ input::-webkit-inner-spin-button {
     width: 11.25rem;
     }
     
-.interest-rate-input{
+    .interest-rate-input{
     width: 12.50rem;
 }
 
