@@ -127,7 +127,7 @@ function emptyScreenRight(){
 }
 
 function checkInputs(){
-    if (mortgageAmountInput.value < 1 || mortgageAmountInput.value > 999999){
+    if (mortgageAmountInput.value < 1 || mortgageAmountInput.value > 999999999){
         mortgageAmountInput.value = ""}
     
     if (mortgageTermInput.value < 1 || mortgageTermInput.value > 99){
