@@ -72,6 +72,7 @@ body {
 } 
 .mortgage-term-input, .interest-rate-input, #mortgage-amount-input{
     border: none; 
+    font-family: "Jakarta";
 }
 
 #mortgage-amount-input{
