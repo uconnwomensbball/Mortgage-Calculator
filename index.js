@@ -121,7 +121,7 @@ radioBtnInterest.addEventListener("change", function () {
 
 function emptyScreenRight(){
     containerRight.innerHTML = `
-    <img src="./images/illustration-empty.svg"/>
+    <img src="./images/illustration-empty.svg" alt="image of calculator and money"/>
     <h4>Results shown here</h4>
     <p class = "results-shown-here-text slate-three-hundred-text small-text">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>`
 }
